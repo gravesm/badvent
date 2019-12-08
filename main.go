@@ -26,6 +26,10 @@ func main() {
 				fmt.Println(exercises.Day3a(os.Stdin))
 			case "3b":
 				fmt.Println(exercises.Day3b(os.Stdin))
+			case "4a":
+				fmt.Println(exercises.Day4a(os.Stdin))
+			case "4b":
+				fmt.Println(exercises.Day4b(os.Stdin))
 			default:
 				cli.ShowAppHelp(c)
 			}
