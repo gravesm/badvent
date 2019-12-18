@@ -18,10 +18,9 @@ func main() {
 				fmt.Println(exercises.Day1a(os.Stdin))
 			case "1b":
 				fmt.Println(exercises.Day1b(os.Stdin))
-			case "2a":
-				fmt.Println(exercises.Day2a(os.Stdin))
-			case "2b":
-				fmt.Println(exercises.Day2b(os.Stdin))
+			case "2":
+				a, b := exercises.Day2(os.Stdin)
+				fmt.Printf("%d\n%d\n", a, b)
 			case "3a":
 				fmt.Println(exercises.Day3a(os.Stdin))
 			case "3b":
@@ -30,10 +29,14 @@ func main() {
 				fmt.Println(exercises.Day4a(os.Stdin))
 			case "4b":
 				fmt.Println(exercises.Day4b(os.Stdin))
-			case "5a":
-				fmt.Println(exercises.Day5a(os.Stdin))
+			case "5":
+				a, b := exercises.Day5(os.Stdin)
+				fmt.Printf("%d\n%d\n", a, b)
 			case "6":
 				a, b := exercises.Day6(os.Stdin)
+				fmt.Printf("%d\n%d\n", a, b)
+			case "7":
+				a, b := exercises.Day7(os.Stdin)
 				fmt.Printf("%d\n%d\n", a, b)
 			default:
 				cli.ShowAppHelp(c)

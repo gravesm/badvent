@@ -2,12 +2,16 @@ package exercises
 
 import (
 	. "github.com/smartystreets/goconvey/convey"
-	"strings"
+	"os"
 	"testing"
 )
 
 func TestDay5(t *testing.T) {
-	Convey("5a should output value", t, func() {
-		So(Day5a(strings.NewReader("1002,6,3,6,4,6,33")), ShouldEqual, 1002)
+	Convey("Day 5 should calculate values", t, func() {
+		fp, _ := os.Open("testdata/5")
+		defer fp.Close()
+		a, b := Day5(fp)
+		So(a, ShouldEqual, 13933662)
+		So(b, ShouldEqual, 2369720)
 	})
 }

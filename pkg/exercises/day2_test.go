@@ -7,15 +7,11 @@ import (
 )
 
 func TestDay2(t *testing.T) {
-	Convey("Day2a should calculate value", t, func() {
+	Convey("Day 2 should calculate values", t, func() {
 		fp, _ := os.Open("testdata/2")
 		defer fp.Close()
-		So(Day2a(fp), ShouldEqual, 5098658)
-	})
-
-	Convey("Day2b should caculate value", t, func() {
-		fp, _ := os.Open("testdata/2")
-		defer fp.Close()
-		So(Day2b(fp), ShouldEqual, 5064)
+		a, b := Day2(fp)
+		So(a, ShouldEqual, 5098658)
+		So(b, ShouldEqual, 5064)
 	})
 }
